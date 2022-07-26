@@ -1,8 +1,12 @@
-# 按照文件后缀名来整理文件夹
-import os
+# 按照文件后缀名整理文件
+import os 
 import shutil
 dir = './arrange_dir'
 for file in os.listdir(dir):
     ext = os.path.splitext(file)[1]
     ext = ext[1:]
-    print(file,ext)
+    if not os.path.isdir(f'{dir}/{ext}'):
+        os.mkdir(f'{dir}/{ext}')
+    source_path = f'{dir}/{file}'
+    target_path = f'{dir}/{ext}/{file}'
+    shutil.move(source_path,target_path)
