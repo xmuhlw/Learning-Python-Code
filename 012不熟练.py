@@ -8,10 +8,12 @@ def read_file():
             result.append(line.split(',')) # 用','进行分割数据
     return result
 datas = read_file()
+print(datas)
 # 数据排序
 def sort_grades(datas):
     return sorted(datas,key = lambda x: int(x[2]),reverse = True)
 datas = sort_grades(datas)
+
 # 输出文件
 def write_file(datas):
     with open('student_grade_output.txt','w',encoding = 'utf-8') as f: 
