@@ -22,11 +22,11 @@ def check_password(password):
         return False,'必须包含至少一个大写字母'
     if not re.findall(r'[0-9]',password):
         return False,'必须包含至少一个数字'
-    if not re.findall(r'[0-9a-zA-Z]',password):
+    if not re.findall(r'^0-9a-zA-Z',password):
         return False,'必须包含至少一个特殊字符'
     return True,None
-
-print(check_password('hel1lAasdwadsadawo'))
+password = input('请输入您的密码:')
+print(check_password(password))
 
 
 

@@ -10,3 +10,6 @@ print('day',curr_datatime.day)
 print('hour',curr_datatime.hour)
 print('minute',curr_datatime.minute)
 print('second',curr_datatime.second)
+
+
+

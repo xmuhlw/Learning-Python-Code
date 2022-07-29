@@ -13,4 +13,5 @@ for line in content.split('\n'):
     match = re.search(pattern,line)
     if match:
         print(f'{match.group(1)}\t{match.group(2)}\t{match.group(3)}')
-        # print(match.groups())
+        
+
